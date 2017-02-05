@@ -10,4 +10,6 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require_tree .
+//= require 'activity_monitor/highcharts'
+//= require 'activity_monitor/chartkick'
+//= require_self

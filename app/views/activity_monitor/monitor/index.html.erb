@@ -1,0 +1,9 @@
+<h1>User activity analytics</h1>
+<h3>Show stats for:</h3>
+<ul>
+  <% @keys.each do |key| %>
+    <li>
+      <%= link_to key, show_url(key: CGI.escape(key)) %>
+    </li>
+  <% end %>
+</ul>
