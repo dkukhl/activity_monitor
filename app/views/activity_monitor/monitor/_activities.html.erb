@@ -2,11 +2,11 @@
   <thead>
     <tr>
       <th>Key</th>
-      <th>Object</th>
+      <th>Owner</th>
       <th>Date and time</th>
     </tr>
   </thead>
   <tbody>
-    <% render @activities %>
+    <%= render partial: 'activity', collection: @activities %>
   </tdoby>
 </table>

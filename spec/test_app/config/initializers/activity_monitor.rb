@@ -12,6 +12,6 @@ ActivityMonitor.setup do |config|
   #
   # Set your method to authenticate user who can access monitor. Not authenticated by default
   #
-  # config.authentication_method = 'authenticate_admin'
+  config.authentication_method = 'authenticate_admin'
 
 end

@@ -6,6 +6,6 @@
     <%= activity.owner && (activity.owner.email || activity.owner_id)  %>
   </td>
   <td>
-    <%= I18n.l(activity.created_at) %>
+    <%= I18n.l(activity.created_at, format: :short) %>
   </td>
 </tr>

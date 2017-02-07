@@ -13,6 +13,9 @@ module ActivityMonitor
   mattr_accessor :current_user_method
   self.current_user_method = 'current_user'
 
+  mattr_accessor :authentication_method
+  self.authentication_method = nil
+
   def self.setup
     yield self
   end
