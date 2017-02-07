@@ -1,0 +1,11 @@
+<tr>
+  <td>
+    <%= activity.key %>
+  </td>
+  <td>
+    <%= activity.owner && (activity.owner.email || activity.owner_id)  %>
+  </td>
+  <td>
+    <%= I18n.l(activity.created_at) %>
+  </td>
+</tr>
