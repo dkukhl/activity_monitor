@@ -1,9 +1,10 @@
 module ActivityMonitor
   module Model
-    extend ActiveSupport::Concern
 
-    included do
+    def monitor(*args)
       include PublicActivity::Model
+      tracked args
     end
+
   end
 end

@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
-  include ActivityMonitor::Custom
-  monitor [:popular]
+  monitor_actions :popular
 
   def index
   end

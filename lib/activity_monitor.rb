@@ -1,7 +1,8 @@
 require "activity_monitor/engine"
-require "activity_monitor/user"
+require "activity_monitor/railtie"
 require "activity_monitor/model"
 require "activity_monitor/custom"
+require "activity_monitor/tracker"
 
 require "public_activity"
 
@@ -18,6 +19,12 @@ module ActivityMonitor
 
   def self.setup
     yield self
+
+    ActivityMonitor.user_class.constantize.class_eval do
+      include PublicActivity::Common
+    end
+
   end
+
 
 end
