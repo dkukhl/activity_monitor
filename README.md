@@ -76,6 +76,7 @@ To record controller actions put this in your controller:
 
 ```ruby
 class PostsController < ApplicationController
+  
   monitor_actions :index
 
 end
