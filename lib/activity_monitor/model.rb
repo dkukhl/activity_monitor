@@ -1,7 +1,7 @@
 module ActivityMonitor
   module Model
 
-    def monitor(*args)
+    def monitor(args)
       include PublicActivity::Model
       tracked args
     end
