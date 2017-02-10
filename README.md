@@ -1,5 +1,7 @@
 # ActivityMonitor
 Painless user activity analytics based on public_activity, ActiveJob and chartkick.
+https://travis-ci.org/dkukhl/activity_monitor.svg?branch=master
+https://codeclimate.com/github/dkukhl/activity_monitor/badges
 
 ## Installation
 Add this line to your application's Gemfile:
