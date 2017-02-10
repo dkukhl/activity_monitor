@@ -55,31 +55,33 @@ Note, that authentication is NOT enabled by default. You should define authentic
 
 ## Usage
 
-### Tracking basic CRUD actions
+### Tracking models
+
 To record any model's create/update/destroy actions, just add this to your model:
 
 ```ruby
-include ActivityMonitor::Model
-tracked
+class Item < ApplicationRecord
+
+  monitor   
+
+end
 ```
 
-'tracked' is a method provided by public_activity gem, all the options apply
+All parameters of public_activity's 'tracked' method apply. you can use :only, :except and so on.
 
-### Tracking custom controller actions
-All custom actions will be assotiated with current user. In your user model add this:
+
+### Tracking controller actions
+
+To record controller actions put this in your controller:
 
 ```ruby
-include ActivityMonitor::User
+class PostsController < ApplicationController
+  monitor_actions :index
+
+end
 ```
 
-To record custom actions put this in your controller:
-
-```ruby
-include ActivityMonitor::Custom
-monitor [:index, :dashboard]
-```
-
-where the array contains actions to be tracked
+You can pass single action or an array of actions to be monitored
 
 ## Analytics
 
